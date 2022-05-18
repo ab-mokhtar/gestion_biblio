@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.User.Reserve">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="184.0" layoutY="22.0" prefHeight="32.0" prefWidth="189.0" text="Reserver  Livre">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="save" layoutX="266.0" layoutY="287.0" mnemonicParsing="false" onAction="#update" text="Save" />
+            <TextField fx:id="Nameinput" editable="false" layoutX="211.0" layoutY="140.0" />
+            <Label layoutX="75.0" layoutY="144.0" text="Livre" />
+            <Label layoutX="75.0" layoutY="191.0" text="date début" />
+            <Label layoutX="75.0" layoutY="240.0" text="Number of pages" />
+            <Label fx:id="AddMessageLabel" layoutX="147.0" layoutY="269.0" prefHeight="18.0" prefWidth="212.0" textFill="#3b00ff" />
+            <TextField fx:id="idinput" layoutX="211.0" layoutY="61.0" visible="false" />
+            <DatePicker fx:id="date_deb" layoutX="211.0" layoutY="187.0" />
+            <DatePicker fx:id="date_retour" layoutX="211.0" layoutY="227.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

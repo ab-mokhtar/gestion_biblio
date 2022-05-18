@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Admin.Addadh">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="nom" layoutX="211.0" layoutY="96.0" />
+            <Label layoutX="96.0" layoutY="27.0" prefHeight="32.0" prefWidth="189.0" text="Ajouter Adhérent">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="addbutton" layoutX="266.0" layoutY="340.0" mnemonicParsing="false" onAction="#update" text="Save" />
+            <TextField fx:id="prenom" layoutX="211.0" layoutY="140.0" />
+            <TextField fx:id="tel" layoutX="211.0" layoutY="187.0" />
+            <TextField fx:id="adresse" layoutX="211.0" layoutY="236.0" />
+            <Label layoutX="75.0" layoutY="100.0" prefHeight="18.0" prefWidth="41.0" text="Nom" />
+            <Label layoutX="75.0" layoutY="144.0" text="Prénom" />
+            <Label layoutX="75.0" layoutY="191.0" text="Tel" />
+            <Label layoutX="75.0" layoutY="240.0" text="Adresse" />
+            <Label fx:id="AddMessageLabel" layoutX="146.0" layoutY="310.0" prefHeight="18.0" prefWidth="212.0" textFill="#3b00ff" />
+            <ChoiceBox fx:id="typebox" layoutX="211.0" layoutY="275.0" prefWidth="150.0" />
+            <Label layoutX="75.0" layoutY="279.0" text="Type" />
+            <TextField fx:id="idinput" layoutX="211.0" layoutY="59.0" visible="false" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

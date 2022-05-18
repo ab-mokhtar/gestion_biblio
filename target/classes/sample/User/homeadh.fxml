@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.User.HomeUserController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="150.0" style="-fx-background-color: #AC9995;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView accessibleRole="BUTTON" fitHeight="75.0" fitWidth="75.0" layoutX="34.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/livres.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView accessibleRole="BUTTON" fitHeight="75.0" fitWidth="75.0" layoutX="34.0" layoutY="163.0" onMouseClicked="#Histori" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/booking.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="27.0" layoutY="112.0" text="Gestion Livre" underline="true">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="243.0" style="-fx-padding: 1;" text="Historique des prêt" underline="true">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <ImageView accessibleRole="BUTTON" fitHeight="48.0" fitWidth="48.0" layoutX="51.0" layoutY="322.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/log-out.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="376.0" text="Déconnexion" underline="true">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="rechinput" layoutX="235.0" layoutY="93.0" />
+            <Label layoutX="27.0" layoutY="14.0" prefHeight="43.0" prefWidth="240.0" text="Consultation  des livres">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="442.0" layoutY="93.0" mnemonicParsing="false" onAction="#recherche" text="Chercher" />
+            <TableView fx:id="LivreTable" layoutX="19.0" layoutY="142.0" prefHeight="238.0" prefWidth="521.0">
+              <columns>
+                  <TableColumn fx:id="idcol" prefWidth="48.80005073547363" sortType="DESCENDING" style="alignement: left;" text="id" />
+                <TableColumn fx:id="namecol" prefWidth="102.39995574951172" style="alignement: left;" text="name" />
+                <TableColumn fx:id="Auteurcol" prefWidth="88.79998779296875" style="alignement: left;" text="Auteur" />
+                  <TableColumn fx:id="categorycol" prefWidth="91.20001220703125" style="alignement: left;" text="category" />
+                  <TableColumn fx:id="nb_pagecol" prefWidth="83.99996948242188" sortType="DESCENDING" style="alignement: left;" text="nb_pages" />
+                 <TableColumn fx:id="editCol" prefWidth="116.00003051757812" sortType="DESCENDING" style="alignement: left;" text="" />
+              </columns>
+            </TableView>
+            <ImageView fitHeight="42.0" fitWidth="35.0" layoutX="27.0" layoutY="88.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/refresh.png" />
+               </image>
+            </ImageView>
+            <Separator blendMode="DARKEN" layoutY="58.0" prefHeight="14.0" prefWidth="550.0" />
+            <Label layoutX="363.0" layoutY="14.0" text="Utilsateur :">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="username" layoutX="459.0" layoutY="14.0" prefHeight="16.0" prefWidth="64.0" textFill="#cf6767">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" layoutX="459.0" layoutY="70.0" prefHeight="18.0" prefWidth="87.0" />
+            <Label layoutX="363.0" layoutY="72.0" text="Aujourd'hui :">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="MessageLabel" layoutX="147.0" layoutY="71.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
